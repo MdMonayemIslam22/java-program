@@ -13,6 +13,10 @@ public class PrintArray {
         }  
     }  
 }
+output: 
+Elements of given array: 
+1 2 3 4 5 
+
 2. Write a Java program to print all negative elements in an array.
 ans:
 public class NegativeArrayItems {
@@ -32,6 +36,9 @@ public class NegativeArrayItems {
 		}
 	}
 }
+output:
+List of Negative Numbers in NEG Array : -40 -4 -8 -13 -11 -99 -60
+
 3.Write a Java program to find sum of all array elements. 
 Ans:
 public class SumOfArray {  
@@ -46,4 +53,8 @@ public class SumOfArray {
         System.out.println("Sum of all the elements of an array: " + sum);  
     }  
 } 
-4. 
+output:
+Sum of all the elements of an array: 15
+
+4. Write a Java program to find maximum and minimum element in an array. 
+Ans:
