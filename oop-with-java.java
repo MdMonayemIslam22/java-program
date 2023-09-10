@@ -1,7 +1,7 @@
-Object oriented programming in java:
+// Object oriented programming in java:
 
-1. Write a Java program to read and print elements of array.
-Ans: 
+// 1. Write a Java program to read and print elements of array.
+// Ans: 
 public class PrintArray {  
     public static void main(String[] args) {  
         //Initialize array  
@@ -13,12 +13,12 @@ public class PrintArray {
         }  
     }  
 }
-output: 
-Elements of given array: 
-1 2 3 4 5 
+// output: 
+// Elements of given array: 
+// 1 2 3 4 5 
 
-2. Write a Java program to print all negative elements in an array.
-ans:
+// 2. Write a Java program to print all negative elements in an array.
+// ans:
 public class NegativeArrayItems {
 	
 	public static void main(String[] args) {
@@ -36,11 +36,11 @@ public class NegativeArrayItems {
 		}
 	}
 }
-output:
-List of Negative Numbers in NEG Array : -40 -4 -8 -13 -11 -99 -60
+// output:
+// List of Negative Numbers in NEG Array : -40 -4 -8 -13 -11 -99 -60
 
-3.Write a Java program to find sum of all array elements. 
-Ans:
+// 3.Write a Java program to find sum of all array elements. 
+// Ans:
 public class SumOfArray {  
     public static void main(String[] args) {  
         //Initialize array  
@@ -53,8 +53,36 @@ public class SumOfArray {
         System.out.println("Sum of all the elements of an array: " + sum);  
     }  
 } 
-output:
-Sum of all the elements of an array: 15
+// output:
+// Sum of all the elements of an array: 15
 
-4. Write a Java program to find maximum and minimum element in an array. 
-Ans:
+// 4. Write a Java program to find maximum and minimum element in an array. 
+// Ans:
+public class main {
+  public static void main(String[] args) {
+    // Declare and initialize array with elements
+    int[] arr = {3, 4, 5, 9, 1, 4, 6, 7, 2};
+
+    // Initialize variable to hold the maximum and minimum values
+    int max = arr[0];
+    int min = arr[0];
+
+    // Loop the array
+    for(int i = 1; i < arr.length; i++){
+      if(arr[i] > max){
+        max = arr[i];
+      }
+      if(arr[i] < min){
+        min = arr[i];
+      }
+    }
+    System.out.println("Maximum element: " + max);
+    System.out.println("Minimum element: " + min);
+  }
+}
+
+/*
+  Output is: 
+  Maximum element: 9
+  Minimum element: 1
+*/
