@@ -58,7 +58,7 @@ public class SumOfArray {
 
 // 4. Write a Java program to find maximum and minimum element in an array. 
 // Ans:
-public class main {
+public class MaxMin {
   public static void main(String[] args) {
     // Declare and initialize array with elements
     int[] arr = {3, 4, 5, 9, 1, 4, 6, 7, 2};
@@ -85,4 +85,34 @@ public class main {
   Output is: 
   Maximum element: 9
   Minimum element: 1
+*/
+//  5. Write a Java program to find second largest element in an array.
+
+public class SecondLargest {
+    public static void main(String[] args) {
+        // Declare and initialize an array with elements
+        int[] arr = { 3, 9, 1, 7, 5, 2, 8, 4, 6 };
+
+        int largest = arr[0];
+        int secondLargest = arr[0];
+
+        for (int num : arr) {
+            if (num > largest) {
+                secondLargest = largest;
+                largest = num;
+            } else if (num > secondLargest && num != largest) {
+                secondLargest = num;
+            }
+        }
+
+        if (secondLargest != largest) {
+            System.out.println("Second largest element: " + secondLargest);
+        } else {
+            System.out.println("No second largest element found.");
+        }
+    }
+}
+/*
+  Output is:
+  Second largest element: 8 
 */
