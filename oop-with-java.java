@@ -162,3 +162,27 @@ public class NegativeElementCounter {
 // output:
 // Total negative numbers: 5
 
+// 8. Write a Java program to copy all elements from an array to another array.
+
+public class ArrayCopy {
+    public static void main(String[] args) {
+        int[] sourceArray = {1, 2, 3, 4, 5};
+        int[] destinationArray = new int[sourceArray.length];
+        
+        // Copy elements from sourceArray to destinationArray
+        for (int i = 0; i < sourceArray.length; i++) {
+            destinationArray[i] = sourceArray[i];
+        }
+        
+        // Print the contents of destinationArray
+        System.out.print("Contents of destinationArray: ");
+        for (int value : destinationArray) {
+            System.out.print(value + " ");
+        }
+    }
+}
+
+/*
+Contents of destinationArray: 1 2 3 4 5 
+*/
+
