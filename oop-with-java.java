@@ -319,7 +319,8 @@ public class UniqueElementsInArray {
 // 4
 // 5
 
-13.Write a Java program to count total number of duplicate elements in an array.
+// 13.Write a Java program to count total number of duplicate elements in an array.
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -352,5 +353,44 @@ public class DuplicateElementCounter {
         System.out.println("Total number of duplicate elements in the array: " + totalDuplicates);
     }
 }
-output:
-Total number of duplicate elements in the array: 6
+// output:
+// Total number of duplicate elements in the array: 6
+
+// 14.Write a Java program to delete all duplicate elements from an array.
+
+import java.util.HashSet;
+import java.util.Arrays;
+
+public class RemoveDuplicatesFromArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 1, 2, 2, 3, 4, 4, 5};
+        
+        // Create a HashSet to store unique elements
+        HashSet<Integer> uniqueElements = new HashSet<>();
+        
+        // Create a new array to store the unique elements
+        int[] uniqueArray;
+        
+        // Iterate through the original array
+        for (int element : array) {
+            uniqueElements.add(element);
+        }
+        
+        // Convert the HashSet to an array
+        uniqueArray = new int[uniqueElements.size()];
+        int index = 0;
+        for (int element : uniqueElements) {
+            uniqueArray[index++] = element;
+        }
+        
+        // Print the unique elements
+        System.out.println("Original array: " + Arrays.toString(array));
+        System.out.println("Array with duplicates removed: " + Arrays.toString(uniqueArray));
+    }
+}
+// output:
+// Original array: [1, 2, 3, 4, 1, 2, 2, 3, 4, 4, 5]
+// Array with duplicates removed: [1, 2, 3, 4, 5]
+
+
+
