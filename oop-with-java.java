@@ -286,3 +286,35 @@ public class ElementFrequencyCounter {
 // Element 3 occurs 2 times
 // Element 4 occurs 3 times
 // Element 5 occurs 1 times
+
+// 12.Write a Java program to print all unique elements in the array
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class UniqueElementsInArray {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 1, 2, 2, 3, 4, 4, 5};
+        
+        // Create a HashSet to store unique elements
+        Set<Integer> uniqueElements = new HashSet<>();
+        
+        // Iterate through the array and add each element to the HashSet
+        for (int element : array) {
+            uniqueElements.add(element);
+        }
+        
+        // Print the unique elements
+        System.out.println("Unique elements in the array:");
+        for (int uniqueElement : uniqueElements) {
+            System.out.println(uniqueElement);
+        }
+    }
+}
+// output:
+// Unique elements in the array:
+// 1
+// 2
+// 3
+// 4
+// 5
