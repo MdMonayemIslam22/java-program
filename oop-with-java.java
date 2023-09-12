@@ -576,3 +576,43 @@ public class ArraySort {
 // Sorted array in ascending order: [1, 2, 5, 5, 6, 9]
 // Sorted array in descending order: [9, 6, 5, 5, 2, 1]
 
+// 20..Write a Java program to sort even and odd elements of array separately.
+
+import java.util.Arrays;
+
+public class SortEvenOddSeparately {
+    public static void main(String[] args) {
+        int[] array = {5, 2, 9, 1, 5, 6};
+        
+        // Separate even and odd elements into two arrays
+        int[] evenArray = new int[array.length];
+        int[] oddArray = new int[array.length];
+        
+        int evenCount = 0;
+        int oddCount = 0;
+        
+        for (int element : array) {
+            if (element % 2 == 0) {
+                evenArray[evenCount++] = element;
+            } else {
+                oddArray[oddCount++] = element;
+            }
+        }
+        
+        // Sort the even and odd arrays
+        Arrays.sort(evenArray, 0, evenCount);
+        Arrays.sort(oddArray, 0, oddCount);
+        
+        // Merge the sorted even and odd arrays back into a single array
+        int[] sortedArray = new int[array.length];
+        System.arraycopy(evenArray, 0, sortedArray, 0, evenCount);
+        System.arraycopy(oddArray, 0, sortedArray, evenCount, oddCount);
+        
+        // Print the sorted array with even and odd elements separated
+        System.out.println("Original Array: " + Arrays.toString(array));
+        System.out.println("Sorted Array with Even and Odd Elements Separated: " + Arrays.toString(sortedArray));
+    }
+}
+// output:
+// Original Array: [5, 2, 9, 1, 5, 6]
+// Sorted Array with Even and Odd Elements Separated: [2, 6, 1, 5, 5, 9]
