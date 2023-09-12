@@ -318,3 +318,39 @@ public class UniqueElementsInArray {
 // 3
 // 4
 // 5
+
+13.Write a Java program to count total number of duplicate elements in an array.
+import java.util.HashMap;
+import java.util.Map;
+
+public class DuplicateElementCounter {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 1, 2, 2, 3, 4, 4, 5};
+        
+        // Create a HashMap to store element frequencies
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        
+        // Iterate through the array and populate the frequency map
+        for (int element : array) {
+            // If the element is already in the map, increment its count
+            if (frequencyMap.containsKey(element)) {
+                frequencyMap.put(element, frequencyMap.get(element) + 1);
+            } else {
+                // If the element is not in the map, add it with a count of 1
+                frequencyMap.put(element, 1);
+            }
+        }
+        
+        // Count the total number of duplicate elements
+        int totalDuplicates = 0;
+        for (int count : frequencyMap.values()) {
+            if (count > 1) {
+                totalDuplicates += count - 1; // Subtract 1 to account for the first occurrence
+            }
+        }
+        
+        System.out.println("Total number of duplicate elements in the array: " + totalDuplicates);
+    }
+}
+output:
+Total number of duplicate elements in the array: 6
