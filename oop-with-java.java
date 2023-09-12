@@ -489,3 +489,49 @@ public class SeparateEvenOdd {
 // Even Array: [2, 4, 6, 8]
 // Odd Array: [1, 3, 5, 7, 9]
 
+// 18. Write a Java program to search an element in an array.
+
+import java.util.Scanner;
+class Array_Search_Element
+{
+	public static void main(String[] args)
+	{   
+		Scanner input =new Scanner(System.in);
+		System.out.print("Enter the Array Limit :");
+		int l =input.nextInt();
+		int [] a =new int[l];
+		for(int i=0;i<l;i++)
+		{
+			System.out.printf("Element of a[%d] :",i);
+			a[i]=input.nextInt();
+		}
+		System.out.print("Enter the Search Array Element :");
+		int s =input.nextInt();
+		int i,f=0;
+		for(i=0; i<l; i++)
+		{
+			if(a[i]==s)
+			{				
+				f=1;
+				break;
+			}
+		}
+		if(f==1)
+		{
+			System.out.printf("The Element is found in the position : %d", i + 1);
+			System.out.printf("\nThe Element is found in the index : %d", i);
+		}
+		else
+		{
+			System.out.println("The Element is Not found");
+		}
+    }
+}
+//  output:
+//  Enter the Array Limit :5
+// Element of a[0] :1 2 3 4 5
+// Element of a[1] :Element of a[2] :Element of a[3] :Element of a[4] :Enter the Search Array Element :4
+// The Element is found in the position : 4
+// The Element is found in the index : 3
+
+
