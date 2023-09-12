@@ -448,3 +448,44 @@ public class ReverseArray {
 // Original array: [1, 2, 3, 4, 5]
 // Reversed array: [5, 4, 3, 2, 1]
 
+// 17. Write a Java program to put even and odd elements of array in two separate array.
+
+import java.util.Arrays;
+
+public class SeparateEvenOdd {
+    public static void main(String[] args) {
+        int[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        
+        // Create two arrays to store even and odd elements
+        int[] evenArray = new int[originalArray.length];
+        int[] oddArray = new int[originalArray.length];
+        
+        int evenCount = 0; // Count of even elements
+        int oddCount = 0;  // Count of odd elements
+        
+        // Iterate through the original array and separate even and odd elements
+        for (int element : originalArray) {
+            if (element % 2 == 0) {
+                // If the element is even, add it to the evenArray
+                evenArray[evenCount++] = element;
+            } else {
+                // If the element is odd, add it to the oddArray
+                oddArray[oddCount++] = element;
+            }
+        }
+        
+        // Trim the evenArray and oddArray to their actual sizes
+        evenArray = Arrays.copyOf(evenArray, evenCount);
+        oddArray = Arrays.copyOf(oddArray, oddCount);
+        
+        // Print the even and odd arrays
+        System.out.println("Original Array: " + Arrays.toString(originalArray));
+        System.out.println("Even Array: " + Arrays.toString(evenArray));
+        System.out.println("Odd Array: " + Arrays.toString(oddArray));
+    }
+}
+// output:
+// Original Array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// Even Array: [2, 4, 6, 8]
+// Odd Array: [1, 3, 5, 7, 9]
+
